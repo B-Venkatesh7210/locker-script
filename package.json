@@ -1,0 +1,21 @@
+{
+  "name": "locker-script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alchemy-sdk": "^2.10.1",
+    "async": "^3.2.4",
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "ethers": "5.4.0",
+    "fs": "^0.0.1-security",
+    "intl": "^1.2.5",
+    "path": "^0.12.7"
+  }
+}
