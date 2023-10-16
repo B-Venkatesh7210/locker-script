@@ -212,7 +212,6 @@ function dateFormatting(time) {
               "0xdAC17F958D2ee523a2206206994597C13D831ec7".toLowerCase() ||
             token0.toLowerCase() == "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48".toLowerCase()
           ) {
-            console.log("Entered token1")
             const newTokenContract = new ethers.Contract(
               token1,
               erc20ABI,
@@ -229,7 +228,6 @@ function dateFormatting(time) {
             };
             console.log("Token Details:", tokenDetails);
           } else {
-            console.log("Entered token0")
             const newTokenContract = new ethers.Contract(
               token0,
               erc20ABI,
