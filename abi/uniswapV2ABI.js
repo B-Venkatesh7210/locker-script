@@ -1,4 +1,4 @@
-const uniswaV2ABI = [
+const uniswapV2ABI = [
   {
     inputs: [],
     payable: false,
@@ -434,4 +434,4 @@ const uniswaV2ABI = [
   },
 ];
 
-module.exports = uniswaV2ABI;
+module.exports = uniswapV2ABI;
