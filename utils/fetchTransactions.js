@@ -6,7 +6,8 @@ const etherscanApiKey = process.env.ETHERSCAN_API_KEY;
 async function fetchTransactions(contractAddress) {
     let page = 1;
     let transactions = [];
-    let blockNumber = 11463946; //TODO: Add block number of contract deployment
+    // let blockNumber = 11463946;
+    let blockNumber = 0; //TODO: Add block number of contract deployment according to LPToken Lock Contract
     while (true) {
       const params = {
         module: "account",
