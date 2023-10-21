@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 
 const contractAddress = process.env.UNICRYPT_CONTRACT_ADDRESS;
+const startingBlockNumber = 11463946;
 
 async function fetchUnicryptTokens() {
   try {
@@ -20,7 +21,7 @@ async function fetchUnicryptTokens() {
       provider
     );
     console.log("Into fetch transactions");
-    const inputDatas = await fetchTransactions(contractAddress);
+    const inputDatas = await fetchTransactions(contractAddress, startingBlockNumber);
     console.log("Input Data for Transactions:", inputDatas.length);
     console.log("Into filter transactions");
 

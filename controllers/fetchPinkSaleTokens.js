@@ -9,6 +9,7 @@ const { dateFormatting } = require('../utils/dateFormatting');
 const { fetchTransactions } = require('../utils/fetchTransactions');
 
 const contractAddress = process.env.PINKSALE_CONTRACT_ADDRESS;
+const startingBlockNumber = 14780708;
 
 async function fetchPinkSaleTokens() {
   try {
@@ -21,7 +22,7 @@ async function fetchPinkSaleTokens() {
       provider
     );
     console.log("Into fetch transactions");
-    const inputDatas = await fetchTransactions(contractAddress);
+    const inputDatas = await fetchTransactions(contractAddress, startingBlockNumber);
     console.log("Input Data for Transactions:", inputDatas.length);
     console.log("Into filter transactions");
 
