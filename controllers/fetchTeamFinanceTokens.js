@@ -32,11 +32,13 @@ async function fetchTeamFinanceTokens() {
 
     for (const transaction of inputDatas) {
       try {
-        console.log(transaction.input)
+        // console.log(transaction.input)
         if (transaction.input) {
-          // const decodedData = await contract.interface.parseTransaction({
-          //   data: transaction.input,
-          // });
+          const decodedData = await contract.interface.parseTransaction({
+            data: transaction.input,
+          });
+          console.log(decodedData)
+          
           // if (
           //   decodedData.name === "lockLPToken" &&
           //   decodedData.args._unlock_date !== undefined &&
@@ -52,8 +54,9 @@ async function fetchTeamFinanceTokens() {
           //   });
           // }
         }
+        break;
       } catch (error) {
-        console.error("Error parsing transaction data:", error);
+        console.error("Transaction Input", transaction);
       }
     }
   } catch (error) {

@@ -1,0 +1,74 @@
+[
+  {
+    "lpAddress": "0x117d8604211c4ffC275Ec68bc3Ebf41cb5Eef06B",
+    "address": "0x43c6BAC0cC012CEFd7A46f5b0646fAAf45b5E97A",
+    "name": "Y Protocol",
+    "unlockDate": "October 27, 2023 at 11:36:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0x117d8604211c4ffC275Ec68bc3Ebf41cb5Eef06B",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0x98A7B3A9c184C33663102b683b69D497Ee0d5350",
+    "address": "0x675AE171FBb3A307b732F1aEe7F49125BFaf9a9c",
+    "name": "The Bull Protocol",
+    "unlockDate": "October 24, 2023 at 04:09:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0x98A7B3A9c184C33663102b683b69D497Ee0d5350",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0xFDaf6DBe71F49A6D5F7530C7612443D4945B7e25",
+    "address": "0x87D32F90142601cFbCb0221667aD5FbBa374e315",
+    "name": "PuTing",
+    "unlockDate": "October 28, 2023 at 05:15:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0xFDaf6DBe71F49A6D5F7530C7612443D4945B7e25",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0x4B3eac627C5F3Ba1bED41B48ee6A92634dDDf061",
+    "address": "0xA4e1ed3e097476d46C598D390789733EC5Dd4d2e",
+    "name": "MuskCZ",
+    "unlockDate": "October 27, 2023 at 01:52:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0x4B3eac627C5F3Ba1bED41B48ee6A92634dDDf061",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0x3534b464281c4C64A59e17f017b24801A2e42551",
+    "address": "0x91a0e54d10EA53D1A12d2a903A2859996c93D029",
+    "name": "Obama",
+    "unlockDate": "October 28, 2023 at 03:03:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0x3534b464281c4C64A59e17f017b24801A2e42551",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0xd1e38682B32a2BBE311991ebec96fd08B8719752",
+    "address": "0x854297F187da349e40Fea858f99E7A61B389aa17",
+    "name": "Pepe Uchiha",
+    "unlockDate": "October 29, 2023 at 09:46:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0xd1e38682B32a2BBE311991ebec96fd08B8719752",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0xbd6563a46Ef6b8153cc63D1e9Aa8174c2b56aA21",
+    "address": "0x02C6116f38493f2eA58f6073E726106C96266d34",
+    "name": "Ctrl+C",
+    "unlockDate": "October 26, 2023 at 03:37:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0xbd6563a46Ef6b8153cc63D1e9Aa8174c2b56aA21",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0xC408da8C62b8B2C01e8A16A316D3E19E984e9863",
+    "address": "0x8E819c320B030504475436e07F7C5F811fa81Bd0",
+    "name": "Mokey Puppet Coin",
+    "unlockDate": "October 25, 2023 at 02:34:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0xC408da8C62b8B2C01e8A16A316D3E19E984e9863",
+    "lockedAt": "PinkSale"
+  },
+  {
+    "lpAddress": "0x95e05d17CC86e36316A6263BddD17D44EeaC9bF8",
+    "address": "0x2fc2Cf9881D7f0aFf07b6A9F4d627238740dC7a9",
+    "name": "Mark of Sargeras",
+    "unlockDate": "October 26, 2023 at 02:06:00",
+    "dextoolsLink": "https://www.dextools.io/app/en/ether/pair-explorer/0x95e05d17CC86e36316A6263BddD17D44EeaC9bF8",
+    "lockedAt": "PinkSale"
+  }
+]

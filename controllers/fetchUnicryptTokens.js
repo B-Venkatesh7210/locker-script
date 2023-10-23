@@ -96,7 +96,7 @@ async function fetchUnicryptTokens() {
               address: token1,
               name: newTokenName,
               unlockDate: date,
-              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "Unicrypt",
             };
             console.log("Token Details:", tokenDetails);
@@ -113,7 +113,7 @@ async function fetchUnicryptTokens() {
               address: token0,
               name: newTokenName,
               unlockDate: date,
-              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "Unicrypt",
             };
             console.log("Token Details:", tokenDetails);

@@ -95,7 +95,7 @@ async function fetchPinkSaleTokens() {
               address: token1,
               name: newTokenName,
               unlockDate: date,
-              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "PinkSale",
             };
             console.log("Token Details:", tokenDetails);
@@ -112,7 +112,7 @@ async function fetchPinkSaleTokens() {
               address: token0,
               name: newTokenName,
               unlockDate: date,
-              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "PinkSale",
             };
             console.log("Token Details:", tokenDetails);
