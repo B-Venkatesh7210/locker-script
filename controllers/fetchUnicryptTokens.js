@@ -21,7 +21,10 @@ async function fetchUnicryptTokens() {
       provider
     );
     console.log("Into fetch transactions");
-    const inputDatas = await fetchTransactions(contractAddress, startingBlockNumber);
+    const inputDatas = await fetchTransactions(
+      contractAddress,
+      startingBlockNumber
+    );
     console.log("Input Data for Transactions:", inputDatas.length);
     console.log("Into filter transactions");
 
@@ -67,6 +70,7 @@ async function fetchUnicryptTokens() {
           address: "",
           name: "",
           unlockDate: "",
+          dextoolsLink: "",
           lockedAt: "Unicrypt",
         };
         if (name === "Uniswap V2") {
@@ -92,6 +96,7 @@ async function fetchUnicryptTokens() {
               address: token1,
               name: newTokenName,
               unlockDate: date,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
               lockedAt: "Unicrypt",
             };
             console.log("Token Details:", tokenDetails);
@@ -108,6 +113,7 @@ async function fetchUnicryptTokens() {
               address: token0,
               name: newTokenName,
               unlockDate: date,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
               lockedAt: "Unicrypt",
             };
             console.log("Token Details:", tokenDetails);
@@ -116,7 +122,7 @@ async function fetchUnicryptTokens() {
           let existingData = [];
           const jsonFilePath = path.join(
             __dirname,
-            "../tokenDetails/unicryptTokenDetails.json"
+            "../tokenDetails/tokenDetails.json"
           );
           if (fs.existsSync(jsonFilePath)) {
             const fileContent = fs.readFileSync(jsonFilePath, "utf-8");

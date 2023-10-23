@@ -69,6 +69,7 @@ async function fetchPinkSaleTokens() {
           address: "",
           name: "",
           unlockDate: "",
+          dextoolsLink: "",
           lockedAt: "PinkSale",
         };
         if (name === "Uniswap V2") {
@@ -94,6 +95,7 @@ async function fetchPinkSaleTokens() {
               address: token1,
               name: newTokenName,
               unlockDate: date,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
               lockedAt: "PinkSale",
             };
             console.log("Token Details:", tokenDetails);
@@ -110,6 +112,7 @@ async function fetchPinkSaleTokens() {
               address: token0,
               name: newTokenName,
               unlockDate: date,
+              dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${lpAddress}`,
               lockedAt: "PinkSale",
             };
             console.log("Token Details:", tokenDetails);
@@ -117,7 +120,7 @@ async function fetchPinkSaleTokens() {
 
           // Append the new tokenDetails to the existing data
           let existingData = [];
-          const jsonFilePath = path.join(__dirname, "../tokenDetails/pinkSaleTokenDetails.json");
+          const jsonFilePath = path.join(__dirname, "../tokenDetails/tokenDetails.json");
           if (fs.existsSync(jsonFilePath)) {
             const fileContent = fs.readFileSync(jsonFilePath, "utf-8");
             // existingData = JSON.parse(fileContent);
