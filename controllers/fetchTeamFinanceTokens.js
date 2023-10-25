@@ -131,8 +131,13 @@ async function fetchTeamFinanceTokens() {
             "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2".toLowerCase()
           ) {
             wethReserve = reserves[0];
-          } else {
+          } else if (
+            token1.toLowerCase() ==
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2".toLowerCase()
+          ) {
             wethReserve = reserves[1];
+          } else {
+            wethReserve = 0;
           }
 
           const ethBalance = ethers.utils.formatEther(wethReserve);
