@@ -122,6 +122,27 @@ async function fetchTeamFinanceTokens() {
             console.log("Token Details:", tokenDetails);
           }
 
+          const reserves = await tokenContract.getReserves();
+          let wethReserve;
+
+          if (
+            token0.toLowerCase() ==
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2".toLowerCase()
+          ) {
+            wethReserve = reserves[0];
+          } else {
+            wethReserve = reserves[1];
+          }
+
+          const ethBalance = ethers.utils.formatEther(wethReserve);
+
+          tokenDetails = {
+            ...tokenDetails,
+            ethBalance: ethBalance,
+          };
+
+          console.log(tokenDetails);
+
           let existingData = [];
           const jsonFilePath = path.join(
             __dirname,
@@ -147,7 +168,6 @@ async function fetchTeamFinanceTokens() {
         // console.log("Under 7 days", name, tokenContractAddress, unlockDate);
       }
     }
-
   } catch (error) {
     console.error("Error fetching transactions:", error);
     throw error;
