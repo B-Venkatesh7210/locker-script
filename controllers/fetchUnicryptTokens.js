@@ -71,6 +71,7 @@ async function fetchUnicryptTokens() {
           name: "",
           unlockDate: "",
           dextoolsLink: "",
+          ethBalance: "",
           lockedAt: "Unicrypt",
         };
         if (name === "Uniswap V2") {

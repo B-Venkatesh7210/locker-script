@@ -74,6 +74,7 @@ async function fetchTeamFinanceTokens() {
           name: "",
           unlockDate: "",
           dextoolsLink: "",
+          ethBalance: "",
           lockedAt: "Team Finance",
         };
         if (name === "Uniswap V2") {
