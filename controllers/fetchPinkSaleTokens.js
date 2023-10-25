@@ -5,8 +5,8 @@ require("dotenv").config();
 const pinkSaleContractABI = require("../abi/pinkSaleContractABI");
 const erc20ABI = require("../abi/erc20ABI");
 const uniswapV2ABI = require("../abi/uniswapV2ABI");
-const { dateFormatting } = require('../utils/dateFormatting');
-const { fetchTransactions } = require('../utils/fetchTransactions');
+const { dateFormatting } = require("../utils/dateFormatting");
+const { fetchTransactions } = require("../utils/fetchTransactions");
 
 const contractAddress = process.env.PINKSALE_CONTRACT_ADDRESS;
 const startingBlockNumber = 14780708;
@@ -14,15 +14,18 @@ const startingBlockNumber = 14780708;
 async function fetchPinkSaleTokens() {
   try {
     const provider = new ethers.providers.JsonRpcProvider(
-        `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
-      );
+      `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`
+    );
     const contract = new ethers.Contract(
       contractAddress,
       pinkSaleContractABI,
       provider
     );
     console.log("Into fetch transactions");
-    const inputDatas = await fetchTransactions(contractAddress, startingBlockNumber);
+    const inputDatas = await fetchTransactions(
+      contractAddress,
+      startingBlockNumber
+    );
     console.log("Input Data for Transactions:", inputDatas.length);
     console.log("Into filter transactions");
 
@@ -70,6 +73,7 @@ async function fetchPinkSaleTokens() {
           name: "",
           unlockDate: "",
           dextoolsLink: "",
+          ethBalance: "",
           lockedAt: "PinkSale",
         };
         if (name === "Uniswap V2") {
@@ -98,7 +102,7 @@ async function fetchPinkSaleTokens() {
               dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "PinkSale",
             };
-            console.log("Token Details:", tokenDetails);
+            // console.log("Token Details:", tokenDetails);
           } else {
             const newTokenContract = new ethers.Contract(
               token0,
@@ -115,12 +119,36 @@ async function fetchPinkSaleTokens() {
               dextoolsLink: `https://www.dextools.io/app/en/ether/pair-explorer/${tokenContractAddress}`,
               lockedAt: "PinkSale",
             };
-            console.log("Token Details:", tokenDetails);
+            // console.log("Token Details:", tokenDetails);
           }
+
+          const reserves = await tokenContract.getReserves();
+          let wethReserve;
+
+          if (
+            token0.toLowerCase() ==
+            "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2".toLowerCase()
+          ) {
+            wethReserve = reserves[0];
+          } else {
+            wethReserve = reserves[1];
+          }
+
+          const ethBalance = ethers.utils.formatEther(wethReserve);
+
+          tokenDetails = {
+            ...tokenDetails,
+            ethBalance: ethBalance,
+          };
+
+          console.log(tokenDetails);
 
           // Append the new tokenDetails to the existing data
           let existingData = [];
-          const jsonFilePath = path.join(__dirname, "../tokenDetails/tokenDetails.json");
+          const jsonFilePath = path.join(
+            __dirname,
+            "../tokenDetails/tokenDetails.json"
+          );
           if (fs.existsSync(jsonFilePath)) {
             const fileContent = fs.readFileSync(jsonFilePath, "utf-8");
             // existingData = JSON.parse(fileContent);
